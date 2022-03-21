@@ -20,8 +20,5 @@ val cubeSequence = scala.collection.mutable.ArrayBuffer[Int]()
     val cubeNumbers = number * number * number
     println(cubeNumbers)
 
-    val cubeArray = scala.collection.mutable.ArraySeq(cubeNumbers)
-    println(cubeArray)
-
   }
 }
