@@ -1,3 +1,5 @@
+import CubeSequence.cubeSequence
+
 import scala.io.StdIn.readLine
 
 object CubeSequence extends App {
@@ -13,12 +15,12 @@ object CubeSequence extends App {
   val endNumber = readLine("What is end number?").toInt
 
   val numbers = (startNumber to endNumber)
-
   println(numbers)
-val cubeSequence = scala.collection.mutable.ArrayBuffer[Int]()
-  for (number <- numbers) {
-    val cubeNumbers = number * number * number
-    println(cubeNumbers)
 
-  }
+  var cubeSequence = for (number <- startNumber to endNumber) yield Math.pow(number, 3).toInt
+   println(s"Cube numbers are: $cubeSequence")
+
+    val oddCubes = for (cube <- cubeSequence if cube % 2 == 1 ) yield cube
+    println(s"The odd cubes are: $oddCubes")
+
 }
